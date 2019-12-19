@@ -1,0 +1,1094 @@
+
+
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Foundation Starter Template</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.2/motion-ui.css">
+		<link rel="stylesheet" href="promise.css">
+		<style>
+			body {background-color: lightgray;}
+			pre {background:lightgrey; padding: 0.5rem 1rem; border:1px solid darkgrey; border-radius:1rem;}
+			.title-bar {display: none;}
+			#main-menu, .top-bar, .top-bar ul{background-color:darkkhaki;}
+			.top-bar {max-width: 75rem; margin: auto; background: transparent !important; border: none !important; position: relative; height:3rem;}
+			.top-bar-extra {position: absolute; right: 0; top: 3rem;}
+			.dropdown.menu a, .dropdown.menu .is-active>a {color: white;}
+			.dropdown.menu>li.is-dropdown-submenu-parent>a::after {border-color: white transparent transparent;}
+			.off-canvas-content {padding-bottom: 3rem;}
+			.off-canvas-content .grid-container {background-color:white;}
+			.off-canvas-content .grid-container-fluid {background:lightsteelblue; padding: 2rem 0;}
+			.off-canvas-content .grid-container-fluid > div {background-color: transparent;}
+			.logo {height: 2rem;}
+			.tooltip {max-width: 30rem; }
+			.has-tip {font-weight: normal;}
+			#leftSide, #rightSide {width: 34rem; background: white;}
+			.js-off-canvas-overlay {background: rgba(0,0,0,.6);}
+			@media screen and (max-width: 26em) {#leftSide, #rightSide{width: 20rem;}}
+			
+		</style>
+	</head>
+	<body>
+		<div class="off-canvas-wrapper">
+			<div class="off-canvas position-left is-transition-push is-closed" data-off-canvas id="leftMenu">
+				<ul class="dropdown menu" data-dropdown-menu>
+					<li data-smooth-scroll>
+						<li><a href="#layout" data-smooth-scroll>Layout</a></li>
+					</li>
+					<li data-smooth-scroll>
+						<li><a href="#visuals" data-smooth-scroll>Visuals</a></li>
+					</li>
+					<li data-smooth-scroll>
+						<li><a href="#navigation" data-smooth-scroll>Navigation</a></li>
+					</li>
+					<li data-smooth-scroll>
+						<li><a href="#containers" data-smooth-scroll>Containers</a></li>
+					</li>
+					<li data-smooth-scroll>
+						<li><a href="#promise" data-smooth-scroll>Promise Styles</a></li>
+					</li>
+				</ul>
+			</div>
+			<div class="off-canvas position-left is-transition-push is-closed" data-off-canvas id="leftSide">
+				<div class="grid-container">
+					<div class="grid-x grid-padding-x">
+						<div class="large-12 cell">
+							<h4>Media Queries</h4>
+						</div>
+						<div class="large-12 cell">
+							<br/><strong>For Responsiveness</strong><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Iphone/Mobile Devices Portrait Use - max 416px">@media screen and (max-width: 26em) { }</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Iphone/Mobile Devices Landscape Use - min 416px, max 668px">@media screen and (min-width: 26em) and (max-width: 41.75em) { }</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Ipad/Tablets Portrait Use - min 672px, max 768px">@media screen and (min-width: 42em) and (max-width: 48em) { }</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Ipad/Tablets Landscape Use - min 768px, max 1024px">@media screen and (min-width: 48em) and (max-width: 64em) { }</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Screen smaller than 1024px / old 1024x768 17in. monitors">@media screen and (max-width: 64em) { }</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Screen larger than 1024px">@media screen and (min-width: 64em) { }</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Screens larger than 1200px / will fit most laptop & desktops">@media screen and (min-width: 75em) { }</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Screens larger than 1600px / can use for 1920x1080">@media screen and (min-width: 100em) { }</span><br/>
+							<br/><strong>For Print</strong><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Styles for Print">@media print {}</span><br/>
+							<br/><strong>For IE Browsers</strong><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Styles for IE">@media screen and (min-width:0\0) { }</span><br/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="off-canvas position-right is-transition-push is-closed" data-off-canvas id="rightSide">
+				<div class="grid-container">
+					<div class="grid-x grid-padding-x">
+						<div class="large-12 cell">
+							<h4>The Basics</h4>
+						</div>
+						<div class="small-3 cell">black</div>
+						<div class="small-3 cell" style="background-color: black"></div>
+						<div class="small-3 cell">white</div>
+						<div class="small-3 cell" style="background-color: white"></div>
+						<div class="small-3 cell">red</div>
+						<div class="small-3 cell" style="background-color: red"></div>
+						<div class="small-3 cell">green</div>
+						<div class="small-3 cell" style="background-color: green"></div>
+						<div class="small-3 cell">blue</div>
+						<div class="small-3 cell" style="background-color: blue"></div>
+						<div class="small-3 cell">yellow</div>
+						<div class="small-3 cell" style="background-color: yellow"></div>
+						<div class="small-3 cell">purple</div>
+						<div class="small-3 cell" style="background-color: purple"></div>
+						<div class="small-3 cell">orange</div>
+						<div class="small-3 cell" style="background-color: orange"></div>
+						<div class="small-3 cell">pink</div>
+						<div class="small-3 cell" style="background-color: pink"></div>
+						<div class="small-3 cell">grey/gray</div>
+						<div class="small-3 cell" style="background-color: grey"></div>
+						<div class="large-12 cell">
+							<h4>The Saturated</h4>
+						</div>
+						<div class="small-3 cell">fuchsia</div>
+						<div class="small-3 cell" style="background-color: fuchsia"></div>
+						<div class="small-3 cell">lime</div>
+						<div class="small-3 cell" style="background-color: lime"></div>
+						<div class="small-3 cell">magenta</div>
+						<div class="small-3 cell" style="background-color: magenta"></div>
+						<div class="small-3 cell">chartreuse</div>
+						<div class="small-3 cell" style="background-color: chartreuse"></div>
+						<div class="small-3 cell">aqua</div>
+						<div class="small-3 cell" style="background-color: aqua"></div>
+						<div class="small-3 cell">springgreen</div>
+						<div class="small-3 cell" style="background-color: springgreen "></div>
+						<div class="small-3 cell">cyan</div>
+						<div class="small-3 cell" style="background-color: cyan"></div>
+						<div class="small-3 cell">turquoise</div>
+						<div class="small-3 cell" style="background-color: turquoise"></div>
+						<div class="large-12 cell">
+							<h4>The Earthtone</h4>
+						</div>
+						<div class="small-3 cell">maroon</div>
+						<div class="small-3 cell" style="background-color: maroon"></div>
+						<div class="small-3 cell">olive</div>
+						<div class="small-3 cell" style="background-color: olive"></div>
+						<div class="small-3 cell">teal</div>
+						<div class="small-3 cell" style="background-color: teal"></div>
+						<div class="small-3 cell">tan</div>
+						<div class="small-3 cell" style="background-color: tan"></div>
+						<div class="small-3 cell">olivedrab</div>
+						<div class="small-3 cell" style="background-color: olivedrab"></div>
+						<div class="small-3 cell">firebrick</div>
+						<div class="small-3 cell" style="background-color: firebrick"></div>
+						<div class="small-3 cell">burlywood</div>
+						<div class="small-3 cell" style="background-color: burlywood"></div>
+						<div class="small-3 cell">beige</div>
+						<div class="small-3 cell" style="background-color: beige"></div>
+						<div class="large-12 cell">
+							<h4>The Lights</h4>
+						</div>
+						<div class="small-3 cell">lightblue</div>
+						<div class="small-3 cell" style="background-color: lightblue"></div>
+						<div class="small-3 cell">lightcoral</div>
+						<div class="small-3 cell" style="background-color: lightcoral"></div>
+						<div class="small-3 cell">lightcyan</div>
+						<div class="small-3 cell" style="background-color: lightcyan"></div>
+						<div class="small-3 cell">lightgoldenrodyellow</div>
+						<div class="small-3 cell" style="background-color: lightgoldenrodyellow"></div>
+						<div class="small-3 cell">lightgrey</div>
+						<div class="small-3 cell" style="background-color: lightgrey"></div>
+						<div class="small-3 cell">lightgreen</div>
+						<div class="small-3 cell" style="background-color: lightgreen"></div>
+						<div class="small-3 cell">lightpink</div>
+						<div class="small-3 cell" style="background-color: lightpink"></div>
+						<div class="small-3 cell">lightsalmon</div>
+						<div class="small-3 cell" style="background-color: lightsalmon"></div>
+						<div class="small-3 cell">lightseagreen</div>
+						<div class="small-3 cell" style="background-color: lightseagreen"></div>
+						<div class="small-3 cell">lightskyblue</div>
+						<div class="small-3 cell" style="background-color: lightskyblue"></div>
+						<div class="small-3 cell">lightslategrey</div>
+						<div class="small-3 cell" style="background-color: lightslategrey"></div>
+						<div class="small-3 cell">lightsteelblue</div>
+						<div class="small-3 cell" style="background-color: lightsteelblue"></div>
+						<div class="small-3 cell">lightyellow</div>
+						<div class="small-3 cell" style="background-color: lightyellow"></div>
+						<div class="large-12 cell">
+							<h4>The Darks</h4>
+						</div>
+						<div class="small-3 cell">darkblue</div>
+						<div class="small-3 cell" style="background-color: darkblue"></div>
+						<div class="small-3 cell">darkcyan</div>
+						<div class="small-3 cell" style="background-color: darkcyan"></div>
+						<div class="small-3 cell">darkgoldenrod</div>
+						<div class="small-3 cell" style="background-color: darkgoldenrod"></div>
+						<div class="small-3 cell">darkgrey</div>
+						<div class="small-3 cell" style="background-color: darkgrey"></div>
+						<div class="small-3 cell">darkgreen</div>
+						<div class="small-3 cell" style="background-color: darkgreen"></div>
+						<div class="small-3 cell">darkkhaki</div>
+						<div class="small-3 cell" style="background-color: darkkhaki"></div>
+						<div class="small-3 cell">darkmagenta</div>
+						<div class="small-3 cell" style="background-color: darkmagenta"></div>
+						<div class="small-3 cell">darkolivegreen</div>
+						<div class="small-3 cell" style="background-color: darkolivegreen"></div>
+						<div class="small-3 cell">darkorange</div>
+						<div class="small-3 cell" style="background-color: darkorange"></div>
+						<div class="small-3 cell">darkorchid</div>
+						<div class="small-3 cell" style="background-color: darkorchid"></div>
+						<div class="small-3 cell">darkred</div>
+						<div class="small-3 cell" style="background-color: darkred"></div>
+						<div class="small-3 cell">darksalmon</div>
+						<div class="small-3 cell" style="background-color: darksalmon"></div>
+						<div class="small-3 cell">darkseagreen</div>
+						<div class="small-3 cell" style="background-color: darkseagreen"></div>
+						<div class="small-3 cell">darkslateblue</div>
+						<div class="small-3 cell" style="background-color: darkslateblue"></div>
+						<div class="small-3 cell">darkslategrey</div>
+						<div class="small-3 cell" style="background-color: darkslategrey"></div>
+						<div class="small-3 cell">darkturquoise</div>
+						<div class="small-3 cell" style="background-color: darkturquoise"></div>
+						<div class="small-3 cell">darkviolet</div>
+						<div class="small-3 cell" style="background-color: darkviolet"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="off-canvas-content" data-off-canvas-content>
+				<div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+					<button class="menu-icon" type="button" data-toggle="leftMenu"></button>
+					<div class="title-bar-title"><img src="/promise/img/logos/BSCPHP_SecondaryLogo_3C_CMYK.svg" class="logo"></div>
+				</div>
+				<div id="main-menu" data-sticky data-margin-top="0">
+					<div class="top-bar" >
+						<div class="top-bar-left">
+							<img src="/promise/img/logos/BSCPHP_SecondaryLogo_3C_CMYK.svg" class="logo">
+						</div>
+						<div class="top-bar-right">
+							<ul class="dropdown menu" data-dropdown-menu data-smooth-scroll>
+								<li data-smooth-scroll>
+									<li><a href="#layout" data-smooth-scroll>Layout</a></li>
+								</li>
+								<li data-smooth-scroll>
+									<li><a href="#visuals" data-smooth-scroll>Visuals</a></li>
+								</li>
+								<li data-smooth-scroll>
+									<li><a href="#navigation" data-smooth-scroll>Navigation</a></li>
+								</li>
+								<li data-smooth-scroll>
+									<li><a href="#containers" data-smooth-scroll>Containers</a></li>
+								</li>
+								<li data-smooth-scroll>
+									<li><a href="#promise" data-smooth-scroll>Promise Styles</a></li>
+								</li>
+							</ul>
+						</div>
+						<div class="top-bar-extra">
+							<button type="button" class="button" data-toggle="leftSide">Media Queries<br/>(left push)</button>
+							<button type="button" class="button" data-toggle="rightSide">HTML Colors<br/>(right push)</button>
+						</div>
+					</div>
+				</div>
+				<div class="grid-container-fluid" id="layout">
+					<div class="grid-container">
+						<h1>Layout</h1>
+					</div>
+				</div>
+				<div class="grid-container">
+					<div class="grid-x grid-padding-x">
+						<div class="large-12 cell">
+							<h4>Containers and Grids</h4>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Contain grid in default 1200px">class="grid-container"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Stretch grid to full available width">class="grid-container fluid"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Stretch grid to full width and removepadding">class="grid-container full"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="display: flex & flex-flow: row wrap">class="grid-x"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Add margin to cells">class="grid-margin-x"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Add padding to cells">class="grid-padding-x"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Uses grid-x with margin">class="grid-x grid-margin-x"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Uses grid-x with padding">class="grid-x grid-padding-x"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Create grid frame 100vh">class="grid-frame"</span><br/>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Create flex block">class="cell"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="1 cell width on small devices">class="small-1"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="2 cells width on small devices">class="small-2"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="3 cells width on medium devices">class="medium-3"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="4 cells width on medium devices">class="medium-4"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="5 cells width on large devices">class="large-5"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="6 cells width on large devices">class="large-6"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="12 cells on small, 4 cells on medium, 3 cells on large">class="cell medium-4 large-3"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="6 cells on small, 8 cells on medium, 2 cells on large">class="cell small-6 medium-8 large-2"</span><br/>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Auto fills left over space available">class="cell auto"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Shrink to smallest width, similar to width: auto">class="cell shrink"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Auto space for large devices">class="large-auto"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Collapses elements">class="medium-margin-collapse"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Create 4 cells offset by 2 on large devices">class="cell small-4 large-offset-2"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates vetical grid">class="grid-y"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Vertical grid with margin">class="grid-y grid-margin-y"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Vertical grid with padding">class="grid-y grid-padding-y"</span><br/>
+						</div>
+						<br/>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/xy-grid.html" target="_blank">Learn more on Foundation grids</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Alignments</h4>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Aligns content cells to the left - default">class="grid-x grid-padding-x"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Aligns content cells to the right">class="grid-x grid-padding-x align-right"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Aligns content cells to the center">class="grid-x grid-padding-x align-center"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Aligns content cells to the sides">class="grid-x grid-padding-x align-justify"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Spaces content cells evenly">class="grid-x grid-padding-x align-spaced"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Aligns content cells to top">class="grid-x grid-padding-x align-top"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Aligns content cells to middle">class="grid-x grid-padding-x align-middle"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Aligns content cells to bottom">class="grid-x grid-padding-x align-bottom"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Stretch content cells to tallest cell">class="grid-x grid-padding-x align-stretch"</span><br/>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Self align cell to the bottom">class="cell small-3 align-self-bottom"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Self align cell to the middle">class="cell small-3 align-self-middle"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Stretch cell to full height">class="cell small-3 align-self-stretch"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Self align cell to the top">class="cell small-3 align-self-top"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Order cell to be in first order on medium but second on small devices">class="cell small-6 small-order-2 medium-order-1"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Order cell to be in second order on medium but first on smal devices">class="cell small-6 small-order-1 medium-order-2"</span><br/>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Create a flex container">class="flex-container"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="This is default">class="flex-dir-row"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Reverse row order">class="flex-dir-row-reverse"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Arrange by column">class="flex-dir-column"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Reverse column order">class="flex-dir-column-reverse"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Auto size flex child">class="flex-child-auto"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Flex child that will grow to take up all possible space">class="flex-child-grow"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Flex child that will shrink to minimum possible space">class="flex-child-shrink"</span><br/>
+						</div>
+						<br/>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/prototyping-utilities.html" target="_blank">Learn more on Foundation Flexbox and Alignments</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Visability</h4>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Will be visible in small and medium devices">class="show-for-medium"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Will be visible in small, medium and large devices">class="show-for-large"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Shows up only for small devices">class="show-for-small-only"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Shows up only for medium devices">class="show-for-medium-only"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Shows up only for large devices">class="show-for-large-only"</span><br/>
+							
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Makes display: none !important">class="hide"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Display: none for medium and large devices">class="hide-for-medium"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Display: none for large devices">class="hide-for-large"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Hide for small devices only">class="hide-for-small-only"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Hide for medium devices only">class="hide-for-medium-only"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Hide for large devices only">class="hide-for-large-only"</span><br/>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Visibility: hidden">class="invisible"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Shows up in landscape view">class="show-for-landscape"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Shows up in portrait view">class="show-for-portrait"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Shows for screen readers only">class="show-for-sr"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Shows up only when focused">class="show-on-focus"</span><br/>
+						</div>
+						<br/>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/visibility.html" target="_blank">Learn more on Foundation Visibility</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Float Classes</h4>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Floats left" class="float-left">class="float-left"</span><br/>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Floats center" class="float-center text-center">class="float-center"</span><br/>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Float right" class="float-right">class="float-right"</span><br/>
+						</div>
+						<div class="large-12 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Clear floats" class="clearfix">class="clearfix"</span><br/>
+						</div>
+						<br/>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/float-classes.html" target="_blank">Learn more on Foundation Float Classes</a><br/><br/>
+						</div>
+					</div>
+				</div>
+				<div class="grid-container-fluid" id="visuals">
+					<div class="grid-container">
+						<h1>Visuals</h1>
+					</div>
+				</div>
+				<div class="grid-container">
+					<div class="grid-x grid-padding-x">
+						<div class="large-12 cell">
+							<h4>Buttons</h4>
+						</div>
+						<div class="cell large-auto">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates a button">class="button"</span><br/><br/>
+							<a href="#" class="button">Learn More</a>
+						</div>
+						<div class="cell large-auto">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates a secondary button">class="secondary button"</span><br/><br/>
+							<a href="#" class="secondary button">Learn More</a>
+						</div>
+						<div class="cell large-auto">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates a success button">class="success button"</span><br/><br/>
+							<a href="#" class="success button">Learn More</a>
+						</div>
+						<div class="cell large-auto">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates an alert button">class="alert button"</span><br/><br/>
+							<a href="#" class="alert button">Learn More</a>
+						</div>
+						<div class="cell large-auto">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates a warning button">class="warning button"</span><br/><br/>
+							<a href="#" class="warning button">Learn More</a>
+						</div>
+						<div class="large-12 clearfix"></div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Create a tiny button">class="button tiny"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Create a small button">class="button small"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Create a regular button">class="button"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Create a large button">class="button large"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Create a regular full width button">class="button expanded"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Create a small full width button">class="button small expanded"</span><br/>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Turn button clear with border color">class="button hollow"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Makes button disable style">class="button disabled"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Makes button turn hollow and disabled">class="button hollow disabled"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Makes button clear background">class="button clear"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Adds drop down to button">class="button dropdown"</span><br/>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Create button group, wrap button withwin div">class="button-group"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Makes all button in group small">class="small button-group"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Full width button group">class="expanded button-group"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Stacks button group vertically for small devices">class="stacked-for-small button-group"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Absolute location for close button">class="close-button"</span><br/>
+						</div>
+						<div class="large-12 clearfix"></div>
+						<br/>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/button.html" target="_blank">Learn more about Foundation Buttons</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Sliders</h4>
+						</div>
+						<div class="large-12 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates a horizontal slider starting at 50 and ends at 200">class="slider" data-slider data-initial-start="50" data-end="200"</span><br/>
+							<div class="slider" data-slider data-initial-start="50" data-end="200">
+								<span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
+								<span class="slider-fill" data-slider-fill></span>
+								<input type="hidden">
+							</div>
+						</div>
+						<div class="large-12 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates a vertical slider starting at 50 and ends at 200">class="slider vertical" data-slider data-initial-start="25" data-end="200" data-vertical="true"</span><br/>
+							<div class="slider vertical" data-slider data-initial-start="25" data-end="200" data-vertical="true">
+								<span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+								<span class="slider-fill" data-slider-fill></span>
+								<input type="hidden">
+							</div>
+						</div>
+						<div class="large-12 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates a vertical slider starting at 50 and ends at 200"> class="slider" data-slider data-initial-start="25" data-initial-end="75"</span><br/>
+							<div class="slider" data-slider data-initial-start="25" data-initial-end="75">
+								<span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+								<span class="slider-fill" data-slider-fill></span>
+								<span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+								<input type="hidden">
+								<input type="hidden">
+							</div>
+						</div>
+						<div class="large-12 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates a horizontal slider starting at 50 and data binds to input ID">class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput1"</span><br/>
+							<div class="grid-x grid-margin-x">
+								<div class="cell small-10">
+									<div class="slider" data-slider data-initial-start="50">
+										<span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput1"></span>
+										<span class="slider-fill" data-slider-fill></span>
+									</div>
+								</div>
+								<div class="cell small-2">
+									<input type="number" id="sliderOutput1">
+								</div>
+							</div>
+						</div>
+						<div class="large-12 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates a horizontal slider starting at 50 and data binds to input ID with STEP of 5">class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2" (STEP of 5)</span><br/>
+							<div class="grid-x grid-margin-x">
+								<div class="cell small-10">
+									<div class="slider" data-slider data-initial-start="50" data-step="5">
+										<span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
+										<span class="slider-fill" data-slider-fill></span>
+									</div>
+								</div>
+								<div class="cell small-2">
+									<input type="number" id="sliderOutput2">
+								</div>
+							</div>
+						</div>
+						<div class="large-12 clearfix"></div>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/slider.html" target="_blank">Learn more about Foundation Sliders</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Switches</h4>
+						</div>
+						<div class="large-12 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates an input switch">&lt;input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch"&gt;</span><br/>
+							<div class="switch">
+								<input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+								<label class="switch-paddle" for="exampleSwitch">
+									<span class="show-for-sr">Download Kittens</span>
+								</label>
+							</div>
+						</div>
+						<div class="large-12 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates an radio switch group">&lt;input class="switch-input" id="exampleRadioSwitch1" type="radio" checked name="testGroup"&gt; (group)</span><br/>
+							<div class="grid-x">
+								<div class="switch medium-4 cell">
+									<input class="switch-input" id="exampleRadioSwitch1" type="radio" checked name="testGroup">
+									<label class="switch-paddle" for="exampleRadioSwitch1">
+										<span class="show-for-sr">Bulbasaur</span>
+									</label>
+								</div>
+								<div class="switch medium-4 cell">
+									<input class="switch-input" id="exampleRadioSwitch2" type="radio" name="testGroup">
+									<label class="switch-paddle" for="exampleRadioSwitch2">
+										<span class="show-for-sr">Charmander</span>
+									</label>
+								</div>
+								<div class="switch medium-4 cell">
+									<input class="switch-input" id="exampleRadioSwitch3" type="radio" name="testGroup">
+									<label class="switch-paddle" for="exampleRadioSwitch3">
+										<span class="show-for-sr">Squirtle</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="large-12 clearfix"></div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Tiny switch size">class="switch tiny"</span><br/>
+							<div class="switch tiny">
+								<input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
+								<label class="switch-paddle" for="tinySwitch">
+									<span class="show-for-sr">Tiny Sandwiches Enabled</span>
+								</label>
+							</div>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Small switch size">class="switch small"</span><br/>
+							<div class="switch small">
+								<input class="switch-input" id="smallSwitch" type="checkbox" name="exampleSwitch">
+								<label class="switch-paddle" for="smallSwitch">
+									<span class="show-for-sr">Small Portions Only</span>
+								</label>
+							</div>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Large switch size">class="switch large"</span><br/>
+							<div class="switch large">
+								<input class="switch-input" id="largeSwitch" type="checkbox" name="exampleSwitch">
+								<label class="switch-paddle" for="largeSwitch">
+									<span class="show-for-sr">Show Large Elephants</span>
+								</label>
+							</div>
+						</div>
+						<div class="large-12 clearfix"></div>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/switch.html" target="_blank">Learn more about Foundation Switches</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Badge</h4>
+						</div>
+						<div class="large-auto cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Primary badge style">class="badge"</span><br/><span class="badge">1</span><br/>
+						</div>
+						<div class="large-auto cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Secondary badge style">class="badge secondary"</span><br/><span class="badge secondary">2</span><br/>
+						</div>
+						<div class="large-auto cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Success badge style">class="badge success"</span><br/><span class="badge success">3</span><br/>
+						</div>
+						<div class="large-auto cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Alert badge style">class="badge alert"</span><br/><span class="badge alert">A</span><br/>
+						</div>
+						<div class="large-auto cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Warning badge style">class="badge warning"</span><br/><span class="badge warning">B</span><br/>
+						</div>
+						<div class="large-12 clearfix"></div>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/badge.html" target="_blank">Learn more about Foundation Badge</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Label</h4>
+						</div>
+						<div class="large-auto cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Primary label style">class="label"</span><br/><span class="label primary">Primary Label</span><br/>
+						</div>
+						<div class="large-auto cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Secondary label style">class="label secondary"</span><br/><span class="label secondary">Secondary Label</span><br/>
+						</div>
+						<div class="large-auto cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Success label style">class="label success"</span><br/><span class="label success">Success Label</span><br/>
+						</div>
+						<div class="large-auto cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Alert label style">class="label alert"</span><br/><span class="label alert">Alert Label</span><br/>
+						</div>
+						<div class="large-auto cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Warning label style">class="label warning"</span><br/><span class="label warning">Warning Label</span><br/>
+						</div>
+						<div class="large-12 clearfix"></div>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/label.html" target="_blank">Learn more about Foundation Badge</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Progress Bar</h4>
+						</div>
+						<div class="large-6 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates an input switch">&lt;div class="progress"&gt;<br/>
+								&lt;div class="progress-meter" style="width: 50%"&gt;&lt;/div&gt;<br/>
+							&lt;/div&gt;</span><br/>
+						</div>
+						<div class="large-6 cell">
+							<div class="progress">
+								<div class="progress-meter" style="width: 50%"></div>
+							</div>
+						</div>
+						<div class="large-6 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates an input switch">&lt;div class="secondary progress"&gt;<br/>
+								&lt;div class="progress-meter" style="width: 25%"&gt;&lt;/div&gt;<br/>
+							&lt;/div&gt;</span><br/>
+						</div>
+						<div class="large-6 cell">
+							<div class="secondary progress">
+								<div class="progress-meter" style="width: 25%"></div>
+							</div>
+						</div>
+						<div class="large-6 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates an input switch">&lt;div class="success progress"&gt;<br/>
+								&lt;div class="progress-meter" style="width: 75%"&gt;&lt;/div&gt;<br/>
+							&lt;/div&gt;</span><br/>
+						</div>
+						<div class="large-6 cell">
+							<div class="success progress">
+								<div class="progress-meter" style="width: 50%"></div>
+							</div>
+						</div>
+						<div class="large-6 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates an input switch">&lt;div class="warning progress"&gt;<br/>
+								&lt;div class="progress-meter" style="width: 75%"&gt;&lt;/div&gt;<br/>
+							&lt;/div&gt;</span><br/>
+						</div>
+						<div class="large-6 cell">
+							<div class="warning progress">
+								<div class="progress-meter" style="width: 50%"></div>
+							</div>
+						</div>
+						<div class="large-6 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates an input switch">&lt;div class="alert progress"&gt;<br/>
+								&lt;div class="progress-meter" style="width: 75%"&gt;&lt;/div&gt;<br/>
+							&lt;/div&gt;</span><br/>
+						</div>
+						<div class="large-6 cell">
+							<div class="alert progress">
+								<div class="progress-meter" style="width: 75%"></div>
+							</div>
+						</div>
+						<div class="large-12 clearfix"></div>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/progress-bar.html" target="_blank">Learn more about Foundation Progress Bars</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Tooltip</h4>
+						</div>
+						<div class="large-6 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Tooltip at the bottom of span tag">data-tooltip data-position="bottom" tabindex="1" title="Fancy word for a beetle."</span><br/><br/>
+						</div>
+						<div class="large-6 cell">
+							<span data-tooltip data-position="top" data-alignment="center" tabindex="2" title="Tooltip at the top of span tag">data-tooltip data-position="top" tabindex="2" title="Fancy word for a beetle."</span><br/><br/>
+						</div>
+						<div class="large-6 cell">
+							<span data-tooltip data-position="right" data-alignment="center" tabindex="3" title="Tooltip to the right of span tag">data-tooltip data-position="right" tabindex="3" title="Aligned on the right"</span><br/>
+						</div>
+						<div class="large-6 cell">
+							<span data-tooltip data-position="left" data-alignment="center" tabindex="4" title="Tooltip to the left of span tag">data-tooltip data-position="left" tabindex="4" title="Aligned on the left"</span><br/>
+						</div>
+						<div class="large-12 clearfix"></div>
+						<div class="large-12 cell"><br/>
+							<a href="https://foundation.zurb.com/sites/docs/label.html" target="_blank">Learn more about Foundation Badge</a><br/><br/>
+						</div>
+					</div>
+				</div>
+				<div class="grid-container-fluid" id="navigation">
+					<div class="grid-container">
+						<h1>Navigation</h1>
+					</div>
+				</div>
+				<div class="grid-container">
+					<div class="grid-x grid-padding-x">
+						<div class="large-12 cell">
+							<h4>Basic Menu</h4>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="basic menu class">class="menu"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="menu aligns to right">class="menu align-right"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="menu aligns center">class="menu align-center"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="expand menu to full screen">class="menu expanded"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="turn horizontal to vertical menu">class="vertical menu"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="vertical menu aligns to right">class="vertical menu align-right"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="vertical menu aligns center">class="vertical menu align-center"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="menu loses styles to be simple">class="menu simple"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="list of menu is active state">class="menu" > class="is-active"</span><br/>
+						</div>
+						<div class="large-8 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="creates dropdown menu">class="dropdown menu" data-dropdown-menu</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="creates vetical dropdown menu">class="vertical dropdown menu" data-dropdown-menu</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="vertical drilldown style menu">class="vertical menu drilldown" data-drilldown</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="vertical drilldown style">class="vertical menu drilldown" data-drilldown data-auto-height="true" data-animate-height="true"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="">class="vertical menu drilldown" data-drilldown data-scroll-top="true"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="vertical menu accordion style">class="vertical menu accordion-menu" data-accordion-menu</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="">class="vertical menu accordion-menu" data-accordion-menu data-submenu-toggle="true"</span><br/>
+						</div>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/menu.html" target="_blank">Learn more about Foundation Menus</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Top Bar</h4>
+						</div>
+						<div class="large-12 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Auto fills left over space available">class="top-bar"</span><br/>
+							<div class="top-bar">
+								<div class="top-bar-left">
+									<ul class="dropdown menu" data-dropdown-menu>
+										<li class="menu-text">Site Title</li>
+										<li>
+											<a href="#">One</a>
+											<ul class="menu vertical">
+												<li><a href="#">One</a></li>
+												<li><a href="#">Two</a></li>
+												<li><a href="#">Three</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Two</a></li>
+										<li><a href="#">Three</a></li>
+									</ul>
+								</div>
+								<div class="top-bar-right">
+									<ul class="menu">
+										<li><input type="search" placeholder="Search"></li>
+										<li><button type="button" class="button">Search</button></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/top-bar.html" target="_blank">Learn more about Foundation Top Bar</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Breadcrumbs</h4>
+						</div>
+						<div class="large-12 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="breadcrumb styles">&lt;nav aria-label="You are here:" role="navigation"&gt;&lt;ul class="breadcrumbs"&gt;</span><br/><br/>
+							<nav aria-label="You are here:" role="navigation">
+								<ul class="breadcrumbs">
+									<li>
+										<a href="#">Home</a>
+									</li>
+									<li>
+										<a href="#">Features</a>
+									</li>
+									<li class="disabled">
+										Gene Splicing
+									</li>
+									<li>
+										<span class="show-for-sr">
+											Current:
+										</span> Cloning
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="large-12 cell">
+							<h4>Off-canvas</h4>
+						</div>
+						<div class="large-6 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="off canvas from left with selected ID name">class="off-canvas position-left" id="offCanvas" data-off-canvas</span><br/><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="off canvas from right with selected ID name">class="off-canvas position-right" id="nameOfID" data-off-canvas</span><br/><br/>
+						</div>
+						<div class="large-6 cell">
+							<button type="button" class="button" data-toggle="leftSide">Media Queries<br/>(left push)</button>
+							<button type="button" class="button" data-toggle="rightSide">HTML Colors<br/>(right push)</button>
+						</div>
+						<div class="large-12 clearfix"></div>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/off-canvas.html" target="_blank">Learn more about Foundation Off-canvas</a><br/><br/>
+						</div>
+					</div>
+				</div>
+				<div class="grid-container-fluid" id="containers">
+					<div class="grid-container">
+						<h1>Containers</h1>
+					</div>
+				</div>
+				<div class="grid-container">
+					<div class="grid-x grid-padding-x">
+						<div class="large-12 cell">
+							<h4>Accordion</h4>
+						</div>
+						<div class="large-12 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates accordion">&lt;ul class="accordion" data-accordion&gt;&lt;/ul&gt;</span><br/>
+							<ul class="accordion" data-accordion>
+								<li class="accordion-item is-active" data-accordion-item>
+									<a href="#" class="accordion-title">Accordion 1</a>
+									<div class="accordion-content" data-tab-content>
+										<p>Panel 1. Lorem ipsum dolor</p>
+									</div>
+								</li>
+								<li class="accordion-item" data-accordion-item>
+									<a href="#" class="accordion-title">Accordion 2</a>
+									<div class="accordion-content" data-tab-content>
+										<p>Panel 2. Lorem ipsum dolor</p>
+									</div>
+								</li>
+								<li class="accordion-item" data-accordion-item>
+									<a href="#" class="accordion-title">Accordion 3</a>
+									<div class="accordion-content" data-tab-content>
+										<p>Panel 3. Lorem ipsum dolor</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="large-12 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Open all tabs">class="accordion" data-accordion data-multi-expand="true"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Close all tabs">class="accordion" data-accordion data-allow-all-closed="true"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Disable accordion"> class="accordion" data-accordion disabled</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Deep linking for accordion. Keep track of opening sequence">class="accordion" data-accordion data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" id="deeplinked-accordion"</span><br/>
+						</div>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/accordion.html" target="_blank">Learn more about Foundation Accordion</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Callout</h4>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Create a callout">class="callout"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Callout with primary styles">class="callout primary"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Callout with secondary styles">class="callout secondary"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Callout with sucess styles">class="callout success"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Callout with warning styles">class="callout warning"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Callout with alert styles">class="callout alert"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Callout in smal size">class="callout small"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Callout in large size">class="callout large"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Callout with alert styles and closeable">class="callout alert" data-closable</span><br/>
+						</div>
+						<div class="large-8 cell">
+							<div class="callout alert" data-closable="slide-out-right">
+								<h5>This is Important!</h5>
+								<p>But when you're done reading it, click the close button in the corner to dismiss this alert.</p>
+								<p>I'm using the default <code>data-closable</code> parameters, and simply fade out.</p>
+								<button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+						</div>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/callout.html" target="_blank">Learn more about Foundation Callout</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Card</h4>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Use class card for the container and card-divider for the header.">class="card" > class="card-divider"</span><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Use class card-section for the content of the card.">class="card" > class="card-section"</span><br/>
+						</div>
+						<div class="large-8 cell">
+							<div class="card" style="width: 300px;">
+								<div class="card-divider">
+									This is a header
+								</div>
+								<img src="https://dummyimage.com/640x16:9/">
+								<div class="card-section">
+									<h4>This is a card.</h4>
+									<p>It has an easy to override visual style, and is appropriately subdued.</p>
+								</div>
+							</div>
+						</div>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/card.html" target="_blank">Learn more about Foundation Card</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Dropdown</h4>
+						</div>
+						<div class="large-8 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Click to open dropdown. More options available.">&lt;button class="button" type="button" data-toggle="example-dropdown"&gt;Toggle Dropdown&lt;/button&gt;<br/>
+							&lt;div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true"&gt;&lt;/div&gt;</span><br/><br/>
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Creates a hoverable dropdown menu. Press works on mobile.">&lt;button class="button" type="button" data-toggle="example-dropdown-1"&gt;Hoverable Dropdown&lt;/button&gt;<br/>
+							&lt;div class="dropdown-pane" id="example-dropdown-1" data-dropdown data-hover="true" data-hover-pane="true"&gt;&lt;/div&gt;</span><br/>
+						</div>
+						<div class="large-4 cell">
+							<button class="button" type="button" data-toggle="example-dropdown">Toggle Dropdown</button>
+							<div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+								Example form in a dropdown.
+								<form>
+									<div class="grid-container">
+										<div class="grid-x grid-margin-x">
+											<div class="cell medium-6">
+												<label>Name
+													<input type="text" placeholder="Kirk, James T.">
+												</label>
+											</div>
+											<div class="cell medium-6">
+												<label>Rank
+													<input type="text" placeholder="Captain">
+												</label>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<button class="button" type="button" data-toggle="example-dropdown-1">Hoverable Dropdown</button>
+							<div class="dropdown-pane" id="example-dropdown-1" data-dropdown data-hover="true" data-hover-pane="true">
+								Just some junk that needs to be said. Or not. Your choice.
+							</div>
+						</div>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/callout.html" target="_blank">Learn more about Foundation Dropdown</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Orbit</h4>
+						</div>
+						<div class="large-8 cell">
+							<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+								<div class="orbit-wrapper">
+									<div class="orbit-controls">
+										<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+										<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+									</div>
+									<ul class="orbit-container">
+										<li class="is-active orbit-slide">
+											<figure class="orbit-figure">
+												<img class="orbit-image" src="https://placehold.it/1200x600/999?text=Slide-1" alt="Space">
+												<figcaption class="orbit-caption">Space, the final frontier.</figcaption>
+											</figure>
+										</li>
+										<li class="orbit-slide">
+											<figure class="orbit-figure">
+												<img class="orbit-image" src="https://placehold.it/1200x600/888?text=Slide-2" alt="Space">
+												<figcaption class="orbit-caption">Lets Rocket!</figcaption>
+											</figure>
+										</li>
+										<li class="orbit-slide">
+											<figure class="orbit-figure">
+												<img class="orbit-image" src="https://placehold.it/1200x600/777?text=Slide-3" alt="Space">
+												<figcaption class="orbit-caption">Encapsulating</figcaption>
+											</figure>
+										</li>
+										<li class="orbit-slide">
+											<figure class="orbit-figure">
+												<img class="orbit-image" src="https://placehold.it/1200x600/666&text=Slide-4" alt="Space">
+												<figcaption class="orbit-caption">Outta This World</figcaption>
+											</figure>
+										</li>
+									</ul>
+								</div>
+								<nav class="orbit-bullets">
+									<button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+									<button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+									<button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+									<button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+								</nav>
+							</div>
+						</div>
+						<div class="large-4 cell">
+							<strong>NOTE:</strong> motion-ui.css is needed for the orbit class to work properly. More details on orbits found on Foundation website.
+						</div>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/orbit.html" target="_blank">Learn more about Foundation Orbit</a><br/><br/>
+						</div>
+						<div class="large-12 cell">
+							<h4>Reveal</h4>
+							Also known as modal pop up.
+						</div>
+						<div class="large-12 cell">
+							<div class="reveal" id="exampleModal1" data-reveal>
+								<h1>Awesome. I Have It.</h1>
+								<p class="lead">Your couch. It is mine.</p>
+								<p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+								<button class="close-button" data-close aria-label="Close modal" type="button">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<p><button class="button" data-open="exampleModal1">Click me for a modal</button></p>
+						</div>
+						<div class="large-12 cell">
+							<a href="https://foundation.zurb.com/sites/docs/reveal.html" target="_blank">Learn more about Foundation Reveal</a><br/><br/>
+						</div>
+					</div>
+				</div>
+				<div class="grid-container-fluid" id="promise">
+					<div class="grid-container">
+						<h1>Promise Styles</h1>
+					</div>
+				</div>
+				<div class="grid-container">
+					<div class="grid-x grid-padding-x">
+						<div class="large-12 cell">
+							<h4>Promise Colors</h4>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="BSC Blue Hex code">BSC Blue - #0071bc</span><br/>
+							<div style="background: #0071bc; width: 100%; height: 50px;"></div>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="BSC Dark Blue Hex code">BSC Dark Blue - #0c3b5d</span><br/>
+							<div style="background: #0c3b5d; width: 100%; height: 50px;"></div>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="BSC Care1st Hex code">BSC Care1st Purple - #9f1f64</span><br/>
+							<div style="background: #9f1f64; width: 100%; height: 50px;"></div>
+						</div>
+						<div class="large-12 clearfix"></div>
+						<div class="large-12 cell">
+							<h4>Promise Buttons</h4>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Primary button style">class="button button-primary"</span><br/>
+							<a href="#" class="button button-primary">This is a link style</a>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Secondary button style">class="button button-secondary"</span><br/>
+							<a href="#" class="button button-secondary">This is a link style</a>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Tertiary button style">class="button button-tertiary"</span><br/>
+							<a href="#" class="button button-tertiary">This is a link style</a>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Primary button round style">class="button button-primary round"</span><br/>
+							<a href="#" class="button button-primary round">This is a link style</a>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Secondary button round style">class="button button-secondary round"</span><br/>
+							<a href="#" class="button button-secondary round">This is a link style</a>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Tertiary button round style">class="button button-tertiary round"</span><br/>
+							<a href="#" class="button button-tertiary round">This is a link style</a>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Primary button round large style">class="button button-large button-primary round"</span><br/>
+							<a href="#" class="button button-large button-primary round">This is a link style</a>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Secondary button round large style">class="button button-large button-secondary round"</span><br/>
+							<a href="#" class="button button-large button-secondary round">This is a link style</a>
+						</div>
+						<div class="large-4 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Tertiary button round large style">class="button button-large button-tertiary round"</span><br/>
+							<a href="#" class="button button-large button-tertiary round">This is a link style</a>
+						</div>
+						<div class="large-12 cell">
+							<h4>List Style</h4>
+						</div>
+						<div class="large-12 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Add pre footer to parent class">class="pre-footer" > list styles</span><br/>
+							<div class="pre-footer">
+								<ul>
+									<li>list 1</li>
+									<li>list 2</li>
+									<li>list 3</li>
+								</ul>
+							</div>
+						</div>
+						<div class="large-12 cell">
+							<span data-tooltip data-position="bottom" data-alignment="center" tabindex="1" title="Add pre footer to parent class">ul class="timeline" > list class="event" data-date="Step 1", etc...</span><br/>
+							
+								<ul class="timeline">
+									<li class="event" data-date="Step 1"><h4>This is title for Step 1</h4><p>Add content for Step 1</p></li>
+									<li class="event" data-date="Step 2"><h4>This is title for Step 2</h4><p>Add content for Step 2</p></li>
+									<li class="event" data-date="Step 3"><h4>This is title for Step 3</h4><p>Add content for Step 3</p></li>
+								</ul>
+							
+						</div>
+					</div>
+				</div>
+
+				</div> <!-- OFF CANVAS CONTENT -->
+				</div> <!-- OFF CANVAS WRAPPER -->
+			</body>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.1.2/what-input.min.js"></script>
+			
+			<script>
+				$(document).foundation();
+			</script>
+		</html>
